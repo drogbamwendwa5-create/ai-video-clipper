@@ -1,0 +1,10 @@
+{
+  "path": "sample.mp4",
+  "duration": 245,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "hasAudio": true,
+  "rotation": 0,
+  "note": "Metadata-only test double; media-dependent tests should mock probe and ffmpeg calls."
+}

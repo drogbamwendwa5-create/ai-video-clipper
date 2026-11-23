@@ -1,0 +1,20 @@
+{
+  "clips": [
+    {
+      "start_sentence_id": 12,
+      "end_sentence_id": 16,
+      "title": "The simple test",
+      "hook": "Most people miss this simple test.",
+      "score": 9,
+      "reason": "It opens with a surprising claim and delivers a complete practical takeaway."
+    },
+    {
+      "start_sentence_id": 31,
+      "end_sentence_id": 35,
+      "title": "Why the first draft fails",
+      "hook": "The first draft is supposed to be wrong.",
+      "score": 8,
+      "reason": "A strong opening leads into a concise explanation with a natural ending."
+    }
+  ]
+}
