@@ -25,10 +25,15 @@ export async function main(argv = process.argv.slice(2)) {
       "dry-run": { type: "boolean", default: false },
       uppercase: { type: "boolean", default: false },
       verbose: { type: "boolean", default: false },
+      url: { type: "string" },
     },
   });
-  const input = positionals[0];
-  if (!input) throw new Error("Usage: node src/cli.js <video.mp4> [--count 5] [--out ./out]");
+  let input = positionals[0];
+  if (!input && values.url) {
+    const { downloadYouTube } = await import("./youtube.js");
+    input = await downloadYouTube(values.url, join(values.out, "downloads"));
+  }
+  if (!input) throw new Error("Usage: node src/cli.js <video.mp4> [--url <youtube-url>] [--count 5] [--out ./out]");
   await checkBinaries();
   await mkdir(values.out, { recursive: true });
 

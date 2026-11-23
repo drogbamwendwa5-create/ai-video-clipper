@@ -24,9 +24,12 @@ const server = http.createServer(async (request, response) => {
       let body = "";
       for await (const chunk of request) body += chunk;
       const input = JSON.parse(body || "{}");
-      if (!input.path) throw new Error("Choose a video file.");
+      if (!input.path && !input.url) throw new Error("Choose a local video or enter a YouTube URL.");
+      const sourceArgs = input.url
+        ? ["--url", input.url]
+        : [input.path];
       const result = await runCli([
-        input.path,
+        ...sourceArgs,
         "--count", String(input.count ?? 5),
         "--min", String(input.min ?? 20),
         "--max", String(input.max ?? 60),

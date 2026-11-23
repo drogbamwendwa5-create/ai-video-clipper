@@ -3,8 +3,10 @@ const status = document.querySelector("#status");
 const clips = document.querySelector("#clips");
 
 processButton.addEventListener("click", async () => {
+  const source = document.querySelector("#video").value.trim();
   const payload = {
-    path: document.querySelector("#video").value.trim(),
+    path: /^https?:\/\//i.test(source) ? "" : source,
+    url: /^https?:\/\//i.test(source) ? source : "",
     count: Number(document.querySelector("#count").value),
     min: Number(document.querySelector("#min").value),
     max: Number(document.querySelector("#max").value),

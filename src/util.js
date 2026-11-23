@@ -2,6 +2,11 @@ import { spawn } from "node:child_process";
 import { mkdir, rename, rm, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
 
+const wingetLinks = `${process.env.LOCALAPPDATA ?? ""}\\Microsoft\\WinGet\\Links`;
+if (wingetLinks && !process.env.PATH?.split(";").includes(wingetLinks)) {
+  process.env.PATH = `${wingetLinks};${process.env.PATH ?? ""}`;
+}
+
 const costs = new Map();
 
 export async function checkBinaries() {

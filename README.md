@@ -26,6 +26,7 @@ The UI runs locally at `http://127.0.0.1:4181`.
 npm run cli -- C:\Videos\podcast.mp4 --count 5 --min 20 --max 60 --out .\out
 npm run cli -- C:\Videos\podcast.mp4 --dry-run --out .\out
 npm run cli -- C:\Videos\podcast.mp4 --force --out .\out
+npm run cli -- --url "https://www.youtube.com/watch?v=VIDEO_ID" --count 5 --out .\out
 ```
 
 ## Test

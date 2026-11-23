@@ -1,5 +1,7 @@
 $project = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location $project
+$wingetLinks = Join-Path $env:LOCALAPPDATA "Microsoft\WinGet\Links"
+$env:PATH = "$wingetLinks;$env:PATH"
 Start-Process -FilePath "node" -ArgumentList "src/server.js" -WorkingDirectory $project -WindowStyle Hidden -PassThru |
   ForEach-Object { Start-Sleep -Milliseconds 900; $chromePaths = @(
     "${env:ProgramFiles}\Google\Chrome\Application\chrome.exe",
