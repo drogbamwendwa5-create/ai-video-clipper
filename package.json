@@ -7,7 +7,9 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "start": "node src/server.js",
+    "cli": "node src/cli.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.12.0",
