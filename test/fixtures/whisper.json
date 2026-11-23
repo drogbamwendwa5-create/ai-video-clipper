@@ -1,0 +1,24 @@
+{
+  "task": "transcribe",
+  "language": "english",
+  "duration": 5.2,
+  "text": "A useful idea starts with a clear example.",
+  "words": [
+    { "word": "A", "start": 0.1, "end": 0.2 },
+    { "word": "useful", "start": 0.21, "end": 0.55 },
+    { "word": "idea", "start": 0.56, "end": 0.84 },
+    { "word": "starts", "start": 0.85, "end": 1.15 },
+    { "word": "with", "start": 1.16, "end": 1.35 },
+    { "word": "a", "start": 1.36, "end": 1.42 },
+    { "word": "clear", "start": 1.43, "end": 1.78 },
+    { "word": "example.", "start": 1.79, "end": 2.4 }
+  ],
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.1,
+      "end": 2.4,
+      "text": "A useful idea starts with a clear example."
+    }
+  ]
+}
