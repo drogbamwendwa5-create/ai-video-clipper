@@ -80,6 +80,11 @@ All time values are seconds. Functions that invoke external processes or provide
 ## Shared utility
 
 - `run(cmd: string, args: string[], options?: import("node:child_process").SpawnOptions): Promise<{ stdout: string, stderr: string }>` — Runs a process directly (never through a shell) and captures its output.
+- `checkBinaries(): Promise<void>` — Verifies ffmpeg and ffprobe are available.
+- `retry(fn: () => Promise<T>, options?: { tries?: number, baseMs?: number }): Promise<T>` — Retries a transient async operation with exponential backoff and jitter.
+- `cached(filePath: string, producerFn: () => Promise<object>, options?: { force?: boolean }): Promise<object>` — Reuses valid JSON cache output or writes producer output atomically.
+- `fmtMmSs(seconds: number): string` — Formats elapsed seconds as mm:ss.
+- `toAssTime(seconds: number): string` — Formats elapsed seconds for ASS timestamps as h:mm:ss.cc.
 
 ## Output layout
 
