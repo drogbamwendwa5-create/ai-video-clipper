@@ -1,0 +1,29 @@
+:root { color-scheme: dark; font-family: Inter, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(circle at top right, #17304d, #07101d 48%, #05080d); color: #edf6ff; }
+main { max-width: 980px; margin: 0 auto; padding: 48px 24px; }
+header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+.mark { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; background: #ffcf5c; color: #08111d; font-weight: 900; font-size: 28px; box-shadow: 0 14px 40px #ffcf5c35; }
+.eyebrow { margin: 0 0 4px; color: #82a7c9; font-size: 12px; text-transform: uppercase; letter-spacing: .18em; }
+h1 { margin: 0; font-size: 30px; }
+.card { background: rgba(12, 27, 43, .92); border: 1px solid #244158; border-radius: 20px; padding: 22px; box-shadow: 0 24px 80px #0008; }
+label { display: block; color: #b9cbdb; font-size: 13px; font-weight: 700; }
+.file-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; margin: 9px 0 20px; }
+input { width: 100%; height: 44px; border-radius: 10px; border: 1px solid #345069; background: #091521; color: white; padding: 0 12px; outline: none; }
+input:focus { border-color: #79baff; box-shadow: 0 0 0 3px #79baff22; }
+button { border: 0; border-radius: 10px; background: #ffcf5c; color: #08111d; font-weight: 850; padding: 0 18px; cursor: pointer; }
+button:disabled { opacity: .55; cursor: wait; }
+.settings { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.settings input { margin-top: 7px; }
+.toggles { display: flex; gap: 18px; margin-top: 18px; }
+.toggles label { display: flex; align-items: center; gap: 7px; }
+.toggles input { width: 16px; height: 16px; }
+.status { margin: 18px 2px; color: #9db1c3; min-height: 24px; }
+.status.error { color: #ff9b9b; }
+.clips { display: grid; gap: 10px; }
+.clip { display: grid; grid-template-columns: 52px 1fr auto; align-items: center; gap: 14px; padding: 14px; border: 1px solid #1f3a50; border-radius: 14px; background: #0b1825; }
+.index { width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; background: #18364d; color: #8dc1ed; font-weight: 800; }
+.clip h3 { margin: 0 0 5px; font-size: 16px; }
+.clip p { margin: 0; color: #91a7bb; font-size: 13px; }
+.score { color: #ffcf5c; font-weight: 800; }
+@media (max-width: 720px) { .settings { grid-template-columns: repeat(2, 1fr); } .file-row { grid-template-columns: 1fr; } button { height: 44px; } }

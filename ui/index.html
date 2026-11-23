@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Video Clipper</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="mark">A</div>
+      <div>
+        <p class="eyebrow">Desktop Studio</p>
+        <h1>AI Video Clipper</h1>
+      </div>
+    </header>
+
+    <section class="card">
+      <label for="video">Source video</label>
+      <div class="file-row">
+        <input id="video" type="text" placeholder="C:\Videos\podcast.mp4 or https://youtube.com/watch?v=...">
+        <button id="process" type="button">Create clips</button>
+      </div>
+
+      <div class="settings">
+        <label>Clip count <input id="count" type="number" min="1" max="20" value="5"></label>
+        <label>Minimum seconds <input id="min" type="number" min="5" value="20"></label>
+        <label>Maximum seconds <input id="max" type="number" min="10" value="60"></label>
+        <label>Output folder <input id="out" type="text" value="./out"></label>
+      </div>
+
+      <div class="toggles">
+        <label><input id="dry" type="checkbox"> Dry run</label>
+        <label><input id="force" type="checkbox"> Force recompute</label>
+        <label><input id="uppercase" type="checkbox"> Uppercase captions</label>
+      </div>
+    </section>
+
+    <section id="status" class="status">Waiting for a video.</section>
+    <section id="clips" class="clips"></section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
